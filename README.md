@@ -24,14 +24,14 @@ Ensure you have a C++17-compatible compiler such as:
 
 1. Clone the repository:
 
-```
-git clone https://github.com/your-username/expression-evaluator.git
-cd expression-evaluator```
+```bash
+   git clone https://github.com/your-username/expression-evaluator.git
+   cd expression-evaluator```
 ```
 
 2. Build the project using CMake:
 
-```
+```bash
 mkdir build
 cd build
 cmake ..
@@ -42,7 +42,7 @@ make
 
 Here's a basic example to get started with the Expression Evaluator:
 
-```
+```cpp
 #include "ExpressionEvaluator.h"
 #include <iostream>
 
@@ -72,7 +72,7 @@ int main() {
 
 ### Output
 
-```
+```yaml
 Variable found: x
 Variable found: y
 Result: 20
