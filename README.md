@@ -81,19 +81,30 @@ Result: 20
 ### API Reference
 
 `setVariable(const std::string& name, const Value& value)`
+
 Assigns a value to a variable used in expressions.
+
 - `name`: The name of the variable.
 - `value`: The value to be assigned to the variable (can be int, float, double, or std::string).
 
+
 `evaluate(const std::string& expression)`
+
 Evaluates the given expression based on the current set of variables.
+
 - `expression`: A string representing the arithmetic or functional expression.
+
 Returns the result of the evaluation as a Value (variant type).
 
+
 `extractVariables(const std::string& expression)`
+
 Extracts the variable names used in the expression without evaluating it.
+
 - `expression`: A string containing the expression.
+
 Returns a std::set<std::string> containing the variable names.
+
 
 ### Supported Operators
 The following arithmetic operators are supported:
@@ -104,3 +115,23 @@ The following arithmetic operators are supported:
     / Division
 
 If one of the operands is a std::string, the evaluator will automatically convert the other operand into a string and concatenate them.
+
+
+### Custom Functions
+
+You can extend the evaluator to support custom functions by defining your own logic in the code. For example, adding support for mathematical functions such as sin, cos, or user-defined functions is possible with minor modifications.
+
+### Contributing
+
+Contributions are welcome! Feel free to submit a pull request or open an issue if you find a bug or have suggestions for improvements.
+
+1. Fork the project
+2. Create your feature branch (git checkout -b feature/new-feature)
+3. Commit your changes (git commit -am 'Add new feature')
+4. Push to the branch (git push origin feature/new-feature)
+5. Open a pull request
+
+
+###License
+
+This project is licensed under the MIT License - see the LICENSE file for details.
