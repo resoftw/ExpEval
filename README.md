@@ -20,23 +20,6 @@ Ensure you have a C++17-compatible compiler such as:
 - Clang 6.0+
 - Microsoft Visual Studio 2019 or later
 
-### Installing
-
-1. Clone the repository:
-
-```cmd
-   git clone https://github.com/resoftw/ExpEval.git
-   cd ExpEval
-```
-
-2. Build the project using CMake:
-
-```cmd
-mkdir build
-cd build
-cmake ..
-make
-```
 
 ### Example Usage
 
