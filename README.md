@@ -103,7 +103,7 @@ Extracts the variable names used in the expression without evaluating it.
 
 - `expression`: A string containing the expression.
 
-Returns a std::set<std::string> containing the variable names.
+Returns a `std::set<std::string>` containing the variable names.
 
 
 ### Supported Operators
@@ -114,7 +114,7 @@ The following arithmetic operators are supported:
     * Multiplication
     / Division
 
-If one of the operands is a std::string, the evaluator will automatically convert the other operand into a string and concatenate them.
+If one of the operands is a `std::string`, the evaluator will automatically convert the other operand into a string and concatenate them.
 
 
 ### Custom Functions
@@ -126,12 +126,9 @@ You can extend the evaluator to support custom functions by defining your own lo
 Contributions are welcome! Feel free to submit a pull request or open an issue if you find a bug or have suggestions for improvements.
 
 1. Fork the project
-2. Create your feature branch (git checkout -b feature/new-feature)
-3. Commit your changes (git commit -am 'Add new feature')
-4. Push to the branch (git push origin feature/new-feature)
+2. Create your feature branch (`git checkout -b feature/new-feature`)
+3. Commit your changes (`git commit -am 'Add new feature'`)
+4. Push to the branch (`git push origin feature/new-feature`)
 5. Open a pull request
 
 
-###License
-
-This project is licensed under the MIT License - see the LICENSE file for details.
