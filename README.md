@@ -117,3 +117,4 @@ Contributions are welcome! Feel free to submit a pull request or open an issue i
 ### Todo
 
 - Custom function with variable parameters.
+- Accepts string literals `'` or `"`

@@ -4,7 +4,7 @@
 int main() {
     ExpressionEvaluator evaluator;
 
-    std::string expr = "$x + $y.a_z * 1.412312 + z";
+    std::string expr = "$x + $y.a_z * 1.412312 + z + 'aaa'";
 
     try {
         // Extracting variables
