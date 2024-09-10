@@ -9,6 +9,7 @@
 #include <set>
 #include <typeinfo>
 
+
 class ExpressionEvaluator {
 public:
     using Value = std::variant<int, float, double, std::string>;
@@ -48,13 +49,30 @@ public:
     }
 
 private:
+    template<class... Ts>
+    struct overloads : Ts... { using Ts::operator()...; };
+
     std::unordered_map<std::string, Value> variables;
     std::unordered_map<std::string, std::function<Value(const Value&)>> functions;
     bool _iseval = false;
 
     Value parseExpression(std::istringstream& iss, std::set<std::string>* variableSet = nullptr) {
+        char op,  sgn;
+        iss >> op;
+        if (op == '+' || op == '-') {
+            sgn = op;
+        }
+        else iss.putback(op);
         Value result = parseTerm(iss, variableSet);
-        char op;
+        std::visit([&result,&sgn](auto&& arg) {
+            using T = std::decay_t<decltype(arg)>;
+            if constexpr (std::is_arithmetic_v<T>) {
+                result = arg * (sgn=='-'?-1:1);
+            }
+            else if constexpr (std::is_same_v<T, std::string>) {
+                result = sgn + arg;
+            }
+        }, result);
         while (iss >> op) {
             if (op == '+' || op == '-') {
                 Value rhs = parseTerm(iss, variableSet);
@@ -87,7 +105,7 @@ private:
     Value parseFactor(std::istringstream& iss, std::set<std::string>* variableSet = nullptr) {
         char ch;
         if (iss >> ch) {
-            if (std::isdigit(ch) || ch == '.') {
+            if (std::isdigit(ch) || ch == '.' || ch=='-' || ch=='+') {
                 iss.putback(ch);
                 float number;
                 iss >> number;
