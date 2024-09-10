@@ -24,7 +24,7 @@ Ensure you have a C++17-compatible compiler such as:
 
 1. Clone the repository:
 
-   ```
+```
 git clone https://github.com/your-username/expression-evaluator.git
 cd expression-evaluator```
 ```
