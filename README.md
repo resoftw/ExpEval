@@ -25,8 +25,8 @@ Ensure you have a C++17-compatible compiler such as:
 1. Clone the repository:
 
 ```cmd
-   git clone https://github.com/your-username/expression-evaluator.git
-   cd expression-evaluator
+   git clone https://github.com/resoftw/ExpEval.git
+   cd ExpEval
 ```
 
 2. Build the project using CMake:
