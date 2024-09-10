@@ -24,14 +24,14 @@ Ensure you have a C++17-compatible compiler such as:
 
 1. Clone the repository:
 
-```bash
+```cmd
    git clone https://github.com/your-username/expression-evaluator.git
-   cd expression-evaluator```
+   cd expression-evaluator
 ```
 
 2. Build the project using CMake:
 
-```bash
+```cmd
 mkdir build
 cd build
 cmake ..
@@ -80,17 +80,19 @@ Result: 20
 
 ### API Reference
 
-setVariable(const std::string& name, const Value& value)
+`1setVariable(const std::string& name, const Value& value)`
 Assigns a value to a variable used in expressions.
 
 name: The name of the variable.
 value: The value to be assigned to the variable (can be int, float, double, or std::string).
-evaluate(const std::string& expression)
+
+`evaluate(const std::string& expression)`
 Evaluates the given expression based on the current set of variables.
 
 expression: A string representing the arithmetic or functional expression.
 Returns the result of the evaluation as a Value (variant type).
-extractVariables(const std::string& expression)
+
+`extractVariables(const std::string& expression)`
 Extracts the variable names used in the expression without evaluating it.
 
 expression: A string containing the expression.
