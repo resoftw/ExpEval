@@ -80,20 +80,27 @@ Result: 20
 
 ### API Reference
 
-`1setVariable(const std::string& name, const Value& value)`
+`setVariable(const std::string& name, const Value& value)`
 Assigns a value to a variable used in expressions.
-
-name: The name of the variable.
-value: The value to be assigned to the variable (can be int, float, double, or std::string).
+- `name`: The name of the variable.
+- `value`: The value to be assigned to the variable (can be int, float, double, or std::string).
 
 `evaluate(const std::string& expression)`
 Evaluates the given expression based on the current set of variables.
-
-expression: A string representing the arithmetic or functional expression.
+- `expression`: A string representing the arithmetic or functional expression.
 Returns the result of the evaluation as a Value (variant type).
 
 `extractVariables(const std::string& expression)`
 Extracts the variable names used in the expression without evaluating it.
-
-expression: A string containing the expression.
+- `expression`: A string containing the expression.
 Returns a std::set<std::string> containing the variable names.
+
+### Supported Operators
+The following arithmetic operators are supported:
+
+    + Addition
+    - Subtraction
+    * Multiplication
+    / Division
+
+If one of the operands is a std::string, the evaluator will automatically convert the other operand into a string and concatenate them.
