@@ -26,4 +26,13 @@ Ensure you have a C++17-compatible compiler such as:
 
    ```bash
    git clone https://github.com/your-username/expression-evaluator.git
-   cd expression-evaluator
+   cd expression-evaluator```
+
+2. Build the project using CMake:
+
+   ```bash
+   Copy code
+   mkdir build
+   cd build
+   cmake ..
+   make```
