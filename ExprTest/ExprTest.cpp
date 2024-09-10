@@ -4,7 +4,7 @@
 int main() {
     ExpressionEvaluator evaluator;
 
-    std::string expr = "-100 -100";
+    std::string expr = "z + x * y";
 
     try {
         // Extracting variables
@@ -15,8 +15,8 @@ int main() {
         }
         std::cout << std::endl;
 
-        evaluator.setVariable("$x", 42.5);
-        evaluator.setVariable("$y.a_z", 1000.0);
+        evaluator.setVariable("x", 42.5);
+        evaluator.setVariable("y", 1000.0);
         evaluator.setVariable("z", std::string(" Hello"));
 
         // Evaluating expression
