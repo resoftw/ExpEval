@@ -114,4 +114,6 @@ Contributions are welcome! Feel free to submit a pull request or open an issue i
 4. Push to the branch (`git push origin feature/new-feature`)
 5. Open a pull request
 
+### Todo
 
+- Custom function with variable parameters.
